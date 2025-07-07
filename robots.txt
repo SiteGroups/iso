@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://langcodes.example.com/sitemap.xml
