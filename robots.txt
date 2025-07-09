@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://langcodes.example.com/sitemap.xml
+Sitemap: https://isocode.siteg.cc/sitemap.xml
