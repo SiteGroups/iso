@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="th-TH">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VC5550K0MN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VC5550K0MN');
+</script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N988X3JP');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตารางรหัสภาษาโลก - เครื่องมือค้นหารหัสภาษา ISO 639</title>
+  <meta name="description" content="รายการรหัสภาษา ISO 639 หลักของโลก รองรับการสลับภาษาไทย-อังกฤษ-จีน และการค้นหา">
+  <meta name="keywords" content="รหัสภาษา, ISO 639, ค้นหาภาษา, รองรับหลายภาษา, สากล化">
+  <meta name="author" content="LangCodes">
+  <meta property="og:title" content="ตารางรหัสภาษาโลก - เครื่องมือค้นหารหัสภาษา ISO 639">
+  <meta property="og:description" content="รายการรหัสภาษา ISO 639 หลักของโลก รองรับการสลับภาษาไทย-อังกฤษ-จีน และการค้นหา">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://isocode.siteg.cc/th/">
+  <meta name="twitter:card" content="summary">
+  <meta name="robots" content="index, follow">
+  <script>window.defaultLang = 'th-TH';</script>
+  <meta name="robots" content="index, follow">
+  <meta rel="canonical" href="https://isocode.siteg.cc/th/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://isocode.siteg.cc/" />
+  <link rel="alternate" hreflang="en-US" href="https://isocode.siteg.cc/en/" />
+  <link rel="alternate" hreflang="th-TH" href="https://isocode.siteg.cc/th/" />
+  <link rel="alternate" hreflang="x-default" href="https://isocode.siteg.cc/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "ตารางรหัสภาษาโลก - เครื่องมือค้นหารหัสภาษา ISO 639",
+    "description": "รายการรหัสภาษา ISO 639 หลักของโลก รองรับการสลับภาษาไทย-อังกฤษ-จีน และการค้นหา",
+    "keywords": "รหัสภาษา, ISO 639, ค้นหาภาษา, รองรับหลายภาษา, สากล化",
+    "url": "https://isocode.siteg.cc/th/"
+  }
+  </script>
+  <script>window.defaultLang = 'th-TH';</script>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <style type="text/tailwindcss">
+    @theme {
+      --color-primary: #4361ee;
+      --color-secondary: #3f37c9;
+      --color-light: #f8f9fa;
+      --color-dark: #212529;
+      --font-inter: 'Inter', sans-serif;
+    }
+    
+    @utility smooth-transition {
+      transition: all 0.3s ease-in-out;
+    }
+    
+    @utility card-hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+    
+    body {
+      font-family: var(--font-inter);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-dark min-h-screen flex flex-col">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N988X3JP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <!-- Navigation -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-language text-primary text-2xl"></i>
+        <h1 class="text-xl md:text-2xl font-bold text-primary">LangCodes</h1>
+      </div>
+      
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <input type="text" id="searchInput" placeholder="ค้นหารหัสภาษา..."
+            class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 w-48 md:w-64 smooth-transition">
+          <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+        
+        <div class="relative">
+          <button id="languageToggle" class="flex items-center space-x-2 bg-primary/10 hover:bg-primary/20 px-3 py-2 rounded-full smooth-transition">
+            <i class="fas fa-globe text-primary"></i>
+            <span id="currentLanguage">ไทย</span>
+            <i class="fas fa-chevron-down text-xs text-primary"></i>
+          </button>
+          <div id="languageDropdown" class="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-1 hidden smooth-transition">
+            <a href="/" class="block px-4 py-2 text-sm hover:bg-gray-100">中文</a>
+            <a href="/en/index.html" class="block px-4 py-2 text-sm hover:bg-gray-100">English</a>
+            <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">ไทย</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <section class="mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4" id="pageTitle">ตารางรหัสภาษาโลก</h2>
+      <p id="description" class="text-gray-600 max-w-2xl">
+        ด้านล่างเป็นรายการรหัสภาษา ISO หลักของโลก รองรับการสลับภาษาไทย-อังกฤษ-จีนและการค้นหา
+      </p>
+    </section>
+    
+    <section id="languageCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Pre-rendered popular language cards for SEO -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden smooth-transition hover:card-hover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-lg font-semibold text-dark">ไทย</h3>
+              <p class="text-sm text-gray-500 mt-1">th</p>
+            </div>
+            <div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">ISO 639</div>
+          </div>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>ชื่อภาษาอังกฤษ</span>
+            <span class="font-medium">Thai</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-md overflow-hidden smooth-transition hover:card-hover">
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="text-lg font-semibold text-dark">อังกฤษ</h3>
+              <p class="text-sm text-gray-500 mt-1">en</p>
+            </div>
+            <div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">ISO 639</div>
+          </div>
+          <div class="flex justify-between text-sm text-gray-600">
+            <span>ชื่อภาษาอังกฤษ</span>
+            <span class="font-medium">ไทย</span>
+          </div>
+        </div>
+      </div>
+      <!-- Dynamically generated content will be appended here -->
+    </section>
+    
+    <section id="noResults" class="hidden text-center py-12">
+      <i class="fas fa-search text-4xl text-gray-300 mb-4"></i>
+      <h3 class="text-xl font-medium mb-2">ไม่พบรหัสภาษาที่ตรงกัน</h3>
+      <p class="text-gray-500">โปรดลองใช้คำค้นหาอื่น</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>© 2025 LangCodes. แพลตฟอร์มแสดงข้อมูลรหัสภาษา</p>
+      <p class="text-sm text-gray-400 mt-2">ตามมาตรฐาน ISO 639 และ ISO 3166</p>
+    </div>
+  </footer>
+
+  <script>
+    // Embed language data for search engine crawling
+    window.languageCodes = [
+      {"code":"th","en":"Thai","zh":"泰语","th":"ไทย"},
+      {"code":"zh-CN","en":"Chinese","zh":"中文","th":"จีน"},
+      {"code":"en","en":"English","zh":"英语","th":"อังกฤษ"},
+      {"code":"es","en":"Spanish","zh":"西班牙语","th":"สเปน"},
+      {"code":"fr","en":"French","zh":"法语","th":"ฝรั่งเศส"},
+      {"code":"de","en":"German","zh":"德语","th":"เยอรมัน"},
+      {"code":"ja","en":"Japanese","zh":"日语","th":"ญี่ปุ่น"},
+      {"code":"ko","en":"Korean","zh":"韩语","th":"เกาหลี"}
+    ];
+  </script>
+  <script type="module" src="../script.js"></script>
+</body>
+</html>

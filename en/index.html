@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VC5550K0MN"></script>
@@ -19,17 +19,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>全球语言代码表 - ISO 639语言代码查询工具</title>
-  <meta name="description" content="全球主要语言的ISO代码查询表，支持中英文双语切换，包含200+种语言的标准代码、英文名称和中文名称。">
-  <meta name="keywords" content="语言代码, ISO 639, 语言查询, 多语言支持, 国际化, language codes">
+  <title>Global Language Codes - ISO 639 Language Code Lookup Tool</title>
+  <meta name="description" content="Comprehensive list of ISO 639 language codes with English and Chinese names, supporting bilingual switching and search functionality.">
+  <meta name="keywords" content="language codes, ISO 639, language lookup, multilingual support, internationalization">
   <meta name="author" content="LangCodes">
-  <meta property="og:title" content="全球语言代码表 - ISO 639语言代码查询工具">
-  <meta property="og:description" content="全球主要语言的ISO代码查询表，支持中英文双语切换，包含200+种语言的标准代码、英文名称和中文名称。">
+  <meta property="og:title" content="Global Language Codes - ISO 639 Language Code Lookup Tool">
+  <meta property="og:description" content="Comprehensive list of ISO 639 language codes with English and Chinese names, supporting bilingual switching and search functionality.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://isocode.siteg.cc">
+  <meta property="og:url" content="https://isocode.siteg.cc/en/">
   <meta name="twitter:card" content="summary">
   <meta name="robots" content="index, follow">
-  <meta rel="canonical" href="https://isocode.siteg.cc/" />
+  <meta rel="canonical" href="https://isocode.siteg.cc/en/" />
   <link rel="alternate" hreflang="zh-CN" href="https://isocode.siteg.cc/" />
   <link rel="alternate" hreflang="en-US" href="https://isocode.siteg.cc/en/" />
   <link rel="alternate" hreflang="th-TH" href="https://isocode.siteg.cc/th/" />
@@ -38,15 +38,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "全球语言代码表 - ISO 639语言代码查询工具",
-    "description": "全球主要语言的ISO代码查询表，支持中英文双语切换，包含200+种语言的标准代码、英文名称和中文名称。",
-    "keywords": "语言代码, ISO 639, 语言查询, 多语言支持, 国际化",
-    "url": "https://isocode.siteg.cc"
+    "name": "Global Language Codes - ISO 639 Language Code Lookup Tool",
+    "description": "Comprehensive list of ISO 639 language codes with English and Chinese names, supporting bilingual switching and search functionality.",
+    "keywords": "language codes, ISO 639, language lookup, multilingual support, internationalization",
+    "url": "https://isocode.siteg.cc/en/"
   }
   </script>
   <script type="application/ld+json">
   {
-    "@context": "https://isocode.siteg.cc",
+    "@context": "https://isocode.siteg.cc/en/",
     "@type": "Dataset",
     "name": "ISO 639 Language Code Dataset",
     "description": "A comprehensive dataset of ISO 639 language codes with English and Chinese names",
@@ -61,6 +61,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     ]
   }
   </script>
+  <script>window.defaultLang = 'en-US';</script>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
   <style type="text/tailwindcss">
@@ -91,7 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N988X3JP"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <!-- 导航栏 -->
+  <!-- Navigation -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <div class="flex items-center space-x-2">
@@ -101,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       
       <div class="flex items-center space-x-4">
         <div class="relative">
-          <input type="text" id="searchInput" placeholder="搜索语言代码..." 
+          <input type="text" id="searchInput" placeholder="Search language codes..."
             class="pl-10 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 w-48 md:w-64 smooth-transition">
           <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
         </div>
@@ -109,7 +110,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="relative group inline-block">
           <button id="languageToggle" class="flex items-center space-x-2 bg-primary/10 hover:bg-primary/20 px-3 py-2 rounded-full smooth-transition">
             <i class="fas fa-globe text-primary"></i>
-            <span id="currentLanguage">中文</span>
+            <span id="currentLanguage">English</span>
             <i class="fas fa-chevron-down text-xs text-primary"></i>
           </button>
           <div id="languageDropdown" class="absolute right-0 z-10 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-right scale-95 group-hover:scale-100">
@@ -124,34 +125,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </header>
 
-  <!-- 主要内容 -->
+  <!-- Main Content -->
   <main class="flex-grow container mx-auto px-4 py-8">
     <section class="mb-8">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4" id="pageTitle">全球语言代码表</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4" id="pageTitle">Global Language Codes</h2>
       <p id="description" class="text-gray-600 max-w-2xl">
-        以下是全球主要语言的ISO代码列表，支持中英文切换和搜索过滤。
+        Below is a list of major global language ISO codes, supporting English/Chinese switching and search filtering.
       </p>
     </section>
     
     <section id="languageCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-      <!-- 语言卡片将通过JavaScript动态生成 -->
+      <!-- Language cards will be generated dynamically by JavaScript -->
     </section>
     
     <section id="noResults" class="hidden text-center py-12">
       <i class="fas fa-search text-4xl text-gray-300 mb-4"></i>
-      <h3 class="text-xl font-medium mb-2">未找到匹配的语言代码</h3>
-      <p class="text-gray-500">请尝试更改搜索关键词</p>
+      <h3 class="text-xl font-medium mb-2">No matching language codes found</h3>
+      <p class="text-gray-500">Please try different search keywords</p>
     </section>
   </main>
 
-  <!-- 页脚 -->
+  <!-- Footer -->
   <footer class="bg-dark text-white py-6">
     <div class="container mx-auto px-4 text-center">
-      <p>© 2025 LangCodes. 语言代码数据可视化平台</p>
-      <p class="text-sm text-gray-400 mt-2">基于ISO 639和ISO 3166标准</p>
+      <p>© 2025 LangCodes. Language Code Data Visualization Platform</p>
+      <p class="text-sm text-gray-400 mt-2">Based on ISO 639 and ISO 3166 standards</p>
     </div>
   </footer>
 
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="../script.js"></script>
 </body>
 </html>

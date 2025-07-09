@@ -6,17 +6,20 @@ import languageCodes from './languageCodes.js';
 let currentLang = 'zh-CN';
 
 // DOM元素
-const languageCards = document.getElementById('languageCards');
-const searchInput = document.getElementById('searchInput');
-const description = document.getElementById('description');
-const noResults = document.getElementById('noResults');
-const currentLanguageText = document.getElementById('currentLanguage');
-const languageToggle = document.getElementById('languageToggle');
-const languageDropdown = document.getElementById('languageDropdown');
+let languageCards, searchInput, description, noResults, currentLanguageText, languageToggle, languageDropdown;
 
 // 初始化应用
 async function initApp() {
   try {
+    // 获取DOM元素
+    languageCards = document.getElementById('languageCards');
+    searchInput = document.getElementById('searchInput');
+    description = document.getElementById('description');
+    noResults = document.getElementById('noResults');
+    currentLanguageText = document.getElementById('currentLanguage');
+    languageToggle = document.getElementById('languageToggle');
+    languageDropdown = document.getElementById('languageDropdown');
+
     // 显示加载状态
     languageCards.innerHTML = `
       <div class="col-span-full text-center py-8">
@@ -32,6 +35,9 @@ async function initApp() {
     if (savedLang && languageData[savedLang]) {
       currentLang = savedLang;
     }
+    
+    // 使用页面设置的默认语言
+    currentLang = window.defaultLang || 'zh-CN';
     
     // 更新SEO元标签
     document.title = languageData[currentLang].metaTitle;
@@ -66,8 +72,17 @@ function renderPage() {
   // 更新页面文本
   description.textContent = languageData[currentLang].description;
   searchInput.placeholder = languageData[currentLang].searchPlaceholder;
-  currentLanguageText.textContent = currentLang === 'zh-CN' ? '中文' : 'English';
+  if (currentLang === 'zh-CN') {
+    currentLanguageText.textContent = '中文'
+  }
+
+  if (currentLang === 'en-US') {
+    currentLanguageText.textContent = 'English'
+  }
   
+    if (currentLang === 'th-TH') {
+    currentLanguageText.textContent = 'ไทย'
+  }
   // 执行搜索
   performSearch();
 }
@@ -100,21 +115,28 @@ function renderLanguageCards(codes) {
       <div class="p-6">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="text-lg font-semibold text-dark">${currentLang === 'zh-CN' ? code.zh : code.en}</h3>
+            <h3 class="text-lg font-semibold text-dark">${currentLang === 'zh-CN' ? code.zh : currentLang === 'th-TH' ? code.th : code.en}</h3>
             <p class="text-sm text-gray-500 mt-1">${code.code}</p>
           </div>
           <div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
             ${currentLang === 'zh-CN' ? 'ISO 639' : 'ISO 639'}
           </div>
         </div>
+        ${currentLang !== 'th-TH' ? `
         <div class="flex justify-between text-sm text-gray-600">
           <span>${currentLang === 'zh-CN' ? '英文名称' : 'English Name'}</span>
           <span class="font-medium">${code.en}</span>
         </div>
+        ` : ''}
         ${currentLang === 'zh-CN' ? `
         <div class="flex justify-between text-sm text-gray-600 mt-2">
           <span>中文名称</span>
           <span class="font-medium">${code.zh}</span>
+        </div>
+        ` : currentLang === 'th-TH' ? `
+        <div class="flex justify-between text-sm text-gray-600 mt-2">
+          <span>ชื่อภาษาไทย</span>
+          <span class="font-medium">${code.th}</span>
         </div>
         ` : ''}
       </div>
@@ -137,21 +159,6 @@ function bindEvents() {
     if (!languageToggle.contains(e.target) && !languageDropdown.contains(e.target)) {
       languageDropdown.classList.add('hidden');
     }
-  });
-  
-  // 语言选择事件
-  document.querySelectorAll('#languageDropdown a').forEach(item => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
-      const lang = item.getAttribute('data-lang');
-      if (lang && lang !== currentLang) {
-        currentLang = lang;
-        localStorage.setItem('appLanguage', currentLang);
-        document.documentElement.lang = currentLang;
-        renderPage();
-      }
-      languageDropdown.classList.add('hidden');
-    });
   });
 }
 
