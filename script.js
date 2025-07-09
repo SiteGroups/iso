@@ -72,6 +72,7 @@ function renderPage() {
   // 更新页面文本
   description.textContent = languageData[currentLang].description;
   searchInput.placeholder = languageData[currentLang].searchPlaceholder;
+  
   if (currentLang === 'zh-CN') {
     currentLanguageText.textContent = '中文'
   }
@@ -80,8 +81,12 @@ function renderPage() {
     currentLanguageText.textContent = 'English'
   }
   
-    if (currentLang === 'th-TH') {
+  if (currentLang === 'th-TH') {
     currentLanguageText.textContent = 'ไทย'
+  }
+
+  if (currentLang === 'id-ID') {
+    currentLanguageText.textContent = 'Indonesia'
   }
   // 执行搜索
   performSearch();
@@ -92,9 +97,7 @@ function performSearch() {
   const searchTerm = searchInput.value.toLowerCase();
   const filteredCodes = searchTerm 
     ? languageCodes.filter(code => 
-        code.code.toLowerCase().includes(searchTerm) || 
-        code.en.toLowerCase().includes(searchTerm) || 
-        code.zh.toLowerCase().includes(searchTerm)
+        code.code.toLowerCase().includes(searchTerm)
       )
     : languageCodes;
   
@@ -110,24 +113,25 @@ function performSearch() {
 
 // 渲染语言卡片
 function renderLanguageCards(codes) {
+  
   languageCards.innerHTML = codes.map(code => `
     <div class="bg-white rounded-xl shadow-md overflow-hidden smooth-transition hover:card-hover">
       <div class="p-6">
         <div class="flex justify-between items-start mb-4">
           <div>
-            <h3 class="text-lg font-semibold text-dark">${currentLang === 'zh-CN' ? code.zh : currentLang === 'th-TH' ? code.th : code.en}</h3>
+            <h3 class="text-lg font-semibold text-dark">${currentLang === 'zh-CN' ? code.zh : currentLang === 'th-TH' ? code.th : currentLang === 'id-ID' ? code.id : code.en}</h3>
             <p class="text-sm text-gray-500 mt-1">${code.code}</p>
           </div>
           <div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
-            ${currentLang === 'zh-CN' ? 'ISO 639' : 'ISO 639'}
+            ISO 639
           </div>
         </div>
-        ${currentLang !== 'th-TH' ? `
+        
         <div class="flex justify-between text-sm text-gray-600">
           <span>${currentLang === 'zh-CN' ? '英文名称' : 'English Name'}</span>
           <span class="font-medium">${code.en}</span>
         </div>
-        ` : ''}
+
         ${currentLang === 'zh-CN' ? `
         <div class="flex justify-between text-sm text-gray-600 mt-2">
           <span>中文名称</span>
@@ -138,7 +142,12 @@ function renderLanguageCards(codes) {
           <span>ชื่อภาษาไทย</span>
           <span class="font-medium">${code.th}</span>
         </div>
-        ` : ''}
+        ` : currentLang === 'id-ID' ? `
+        <div class="flex justify-between text-sm text-gray-600 mt-2">
+          <span>ชื่อภาษาไทย</span>
+          <span class="font-medium">${code.id}</span>
+        </div>
+        `: ''}
       </div>
     </div>
   `).join('');

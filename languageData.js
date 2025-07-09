@@ -29,7 +29,7 @@ export default {
     "metaTitle": "ตารางรหัสภาษาโลก - เครื่องมือค้นหารหัสภาษา ISO 639",
     "metaDescription": "ตารางค้นหารหัส ISO ของภาษาหลักทั่วโลก รองรับการสลับภาษาไทยและอังกฤษ รวมถึงรหัสมาตรฐาน ชื่อภาษาอังกฤษและชื่อภาษาไทยมากกว่า 200 ภาษา",
     "metaKeywords": "รหัสภาษา, ISO 639, ภาษา, รองรับหลายภาษา, อินเตอร์เนชันแนลไลเซชัน",
-    "description": "ด้านล่างนี้เป็นรายการรหัส ISO ของภาษาหลักทั่วโลก รองรับการสลับภาษาไทย-อังกฤษและการค้นหาปริфиль",
+    "description": "ด้านล่างนี้เป็นรายการรหัส ISO ของภาษาหลักทั่วโลก รองรับการสลับภาษาไทย-อังกฤษและการค้นหาปริфиว",
     "noResults": "ไม่พบรหัสภาษาที่ตรงกัน",
     "searchPlaceholder": "ค้นหารหัสภาษา...",
     "language": "ภาษา",
@@ -37,5 +37,18 @@ export default {
     "englishName": "ชื่อภาษาอังกฤษ",
     "thaiName": "ชื่อภาษาไทย",
     "loading": "กำลังโหลด..."
+  },
+  "id-ID": {
+    "metaTitle": "Tabel Kode Bahasa Global - Alat Pencarian Kode Bahasa ISO 639",
+    "metaDescription": "Tabel lengkap untuk kode bahasa ISO 639, mendukung switching bahasa Indonesia dan Inggris, berisi lebih dari 200 kode bahasa dengan nama Inggris dan Indonesia.",
+    "metaKeywords": "kode bahasa, ISO 639, pencarian bahasa, dukungan multibahasa, internasionalisasi",
+    "description": "Berikut adalah daftar kode ISO bahasa utama dari seluruh dunia, mendukung switching bahasa Indonesia-Inggris dan filter pencarian.",
+    "noResults": "Tidak ditemukan kode bahasa yang cocok",
+    "searchPlaceholder": "Cari kode bahasa...",
+    "language": "Bahasa",
+    "code": "Kode",
+    "englishName": "Nama Inggris",
+    "indonesianName": "Nama Indonesia",
+    "loading": "Memuat..."
   }
 };
