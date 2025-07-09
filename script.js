@@ -88,6 +88,10 @@ function renderPage() {
   if (currentLang === 'id-ID') {
     currentLanguageText.textContent = 'Indonesia'
   }
+
+  if (currentLang === 'es-ES') {
+    currentLanguageText.textContent = 'Español'
+  }
   // 执行搜索
   performSearch();
 }
@@ -127,27 +131,26 @@ function renderLanguageCards(codes) {
           </div>
         </div>
         
+        ${currentLang !== 'en-US' ? `
         <div class="flex justify-between text-sm text-gray-600">
-          <span>${currentLang === 'zh-CN' ? '英文名称' : 'English Name'}</span>
+          <span>${'English Name'}</span>
           <span class="font-medium">${code.en}</span>
         </div>
+        ` : ''}
 
-        ${currentLang === 'zh-CN' ? `
+        ${(() => {
+          const langConfig = languageData[currentLang];
+          const langCode = currentLang.split('-')[0];
+          if (langConfig && langConfig.localName && code[langCode]) {
+            return `
         <div class="flex justify-between text-sm text-gray-600 mt-2">
-          <span>中文名称</span>
-          <span class="font-medium">${code.zh}</span>
+          <span>${langConfig.localName}</span>
+          <span class="font-medium">${code[langCode]}</span>
         </div>
-        ` : currentLang === 'th-TH' ? `
-        <div class="flex justify-between text-sm text-gray-600 mt-2">
-          <span>ชื่อภาษาไทย</span>
-          <span class="font-medium">${code.th}</span>
-        </div>
-        ` : currentLang === 'id-ID' ? `
-        <div class="flex justify-between text-sm text-gray-600 mt-2">
-          <span>Nama Indonesia</span>
-          <span class="font-medium">${code.id}</span>
-        </div>
-        `: ''}
+            `;
+          }
+          return '';
+        })()}
       </div>
     </div>
   `).join('');

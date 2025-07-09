@@ -9,7 +9,7 @@ export default {
     "language": "语言",
     "code": "代码",
     "englishName": "英文名称",
-    "chineseName": "中文名称",
+    "localName": "中文名称",
     "loading": "加载中..."
   },
   "en-US": {
@@ -22,7 +22,7 @@ export default {
     "language": "Language",
     "code": "Code",
     "englishName": "English Name",
-    "chineseName": "Chinese Name",
+    "localName": "English Name",
     "loading": "Loading..."
   },
   "th-TH": {
@@ -35,7 +35,7 @@ export default {
     "language": "ภาษา",
     "code": "รหัส",
     "englishName": "ชื่อภาษาอังกฤษ",
-    "thaiName": "ชื่อภาษาไทย",
+    "localName": "ชื่อภาษาไทย",
     "loading": "กำลังโหลด..."
   },
   "id-ID": {
@@ -48,7 +48,20 @@ export default {
     "language": "Bahasa",
     "code": "Kode",
     "englishName": "Nama Inggris",
-    "indonesianName": "Nama Indonesia",
+    "localName": "Nama Indonesia",
     "loading": "Memuat..."
+  },
+  "es-ES": {
+    "metaTitle": "Tabla de Códigos de Idiomas Globales - Herramienta de Búsqueda de Códigos ISO 639",
+    "metaDescription": "Una tabla completa de códigos de idioma ISO 639, compatible con el cambio entre español e inglés, que contiene más de 200 códigos de idioma con nombres en inglés y español.",
+    "metaKeywords": "códigos de idioma, ISO 639, búsqueda de idiomas, soporte multilingüe, internacionalización",
+    "description": "A continuación se muestra una lista de los principales códigos ISO de idiomas del mundo, compatible con el cambio entre español e inglés y el filtrado de búsqueda.",
+    "noResults": "No se encontraron códigos de idioma coincidentes",
+    "searchPlaceholder": "Buscar códigos de idioma...",
+    "language": "Idioma",
+    "code": "Código",
+    "englishName": "Nombre en inglés",
+    "localName": "Nombre en español",
+    "loading": "Cargando..."
   }
 };
