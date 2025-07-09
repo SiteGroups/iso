@@ -144,7 +144,7 @@ function renderLanguageCards(codes) {
         </div>
         ` : currentLang === 'id-ID' ? `
         <div class="flex justify-between text-sm text-gray-600 mt-2">
-          <span>ชื่อภาษาไทย</span>
+          <span>Nama Indonesia</span>
           <span class="font-medium">${code.id}</span>
         </div>
         `: ''}
